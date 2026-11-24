@@ -1,0 +1,317 @@
+      html,
+      body {
+         overflow: hidden;
+         background: #fee;
+      }
+
+      .cartoon {
+         --brown1: #753;
+         --brown2: #975;
+         --orange1: orange;
+         --orange2: darkorange;
+         width: 80vmin;
+         height: 80vmin;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+
+      .cartoon div {
+         position: absolute;
+         box-sizing: border-box;
+      }
+
+      .body {
+   width: 40%;
+   height: 40%;
+   background: #e2e8f0;
+   border: 0.8vmin solid #94a3b8;
+   color: #e2e8f0;
+   border-radius: 50%;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, 0);
+   box-shadow:
+      -4vmin 14.5vmin 0 -13vmin,
+      4vmin 14.5vmin 0 -13vmin;
+}
+
+.suit-panel {
+   width: 40%;
+   height: 25%;
+   background: #64748b;
+   border: 0.5vmin solid #475569;
+   border-radius: 15%;
+   top: 35%;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.button-red,
+.button-blue,
+.button-green {
+   width: 15%;
+   height: 25%;
+   border-radius: 50%;
+   top: 20%;
+}
+
+.button-red {
+   background: #ef4444;
+   left: 15%;
+}
+
+.button-blue {
+   background: #38bdf8;
+   left: 42%;
+}
+
+.button-green {
+   background: #22c55e;
+   left: 69%;
+}
+
+.suit-badge {
+   width: 18%;
+   height: 18%;
+   background: #facc15;
+   color: #1e3a8a;
+   border-radius: 50%;
+   top: 65%;
+   left: 15%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 2vmin;
+}
+
+.head::before {
+   background: #e2e8f0;
+}
+      .wing {
+         height: 30%;
+         width: 20%;
+         background: var(--brown2);
+         border-radius: 100% 0% 100% 5%;
+         top: 41%;
+         left: 23%;
+         transform-origin: top right;
+         transform: rotate(-10deg);
+      }
+
+      .wing+.wing {
+         left: auto;
+         right: 43%;
+         transform: scaleX(-1) rotate(-10deg);
+      }
+
+      .head {
+         width: 19%;
+         height: 19%;
+         border-radius: 50%;
+         background: var(--brown2);
+         top: 15%;
+         left: 50%;
+         transform: translate(-50%, 0);
+         clip-path: polygon(0% 20%, 100% 20%, 100% 500%, 0% 500%);
+      }
+
+      .head::before {
+         content: "";
+         display: block;
+         position: absolute;
+         width: 40%;
+         height: 120%;
+         background: var(--brown2);
+         top: 80%;
+         left: 50%;
+         transform: translate(-50%, 0);
+         border-radius: 0 0 100% 100% / 30%;
+      }
+
+      .eye {
+         width: 10%;
+         height: 10%;
+         background: black;
+         border-radius: 50%;
+         top: 45%;
+         left: 50%;
+         transform: translate(-50%, 0) translate(-2.5vmin, 0);
+         box-shadow: 5vmin 0
+      }
+
+      .beak {
+         width: 4vmin;
+         height: 3vmin;
+         border-left: 4vmin solid var(--orange1);
+         border-top: 1.5vmin solid transparent;
+         border-bottom: 1.5vmin solid transparent;
+         top: 60%;
+         left: 50%;
+      }
+
+      .red {
+         width: 2.5vmin;
+         height: 6vmin;
+         background: #d00;
+         border-radius: 100% / 100% 0 100% 100%;
+         top: 60%;
+         left: 50%;
+         transform: translate(-100%, 0);
+      }
+
+      .leg {
+         width: 3%;
+         height: 21%;
+         background: var(--orange1);
+         top: 79%;
+         left: 50%;
+         transform: translate(-50%, 0) translate(-4vmin, 0);
+         border-radius: 5vmin / 50%;
+         background-image:
+            repeating-linear-gradient(transparent 0 10%, rgba(0, 0, 0, 0.1) 0 11%);
+      }
+
+      .leg+.leg {
+         transform: translate(-50%, 0) translate(4vmin, 0);
+      }
+
+      .leg::before,
+      .leg::after {
+         content: "";
+         display: block;
+         position: absolute;
+         width: 80%;
+         height: 35%;
+         left: 50%;
+         bottom: 0;
+         background: var(--orange1);
+         border-radius: 5vmin;
+         transform-origin: 50% 0;
+         transform: translate(-50%, 0) rotate(30deg);
+      }
+
+    .leg::after {
+         transform: translate(-50%, 0) rotate(-30deg);
+    }
+    /* Astronaut Helmet */
+    .helmet {
+        width: 29%;
+        height: 29%;
+        background: transparent;
+        border: 1vmin solid #7288a7ce;
+        border-radius: 50%;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        box-shadow: 0 0 1vmin #64748b;
+    }
+
+    /* visor */
+    .visor {
+        width: 78%;
+        height: 65%;
+        background: rgba(125, 211, 252, 0.15);
+        border: 0.7vmin solid rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        top: 22%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* Reflection on glass */
+    .shine {
+        width: 25%;
+        height: 12%;
+        background: white;
+        border-radius: 50%;
+        top: 18%;
+        left: 18%;
+        opacity: 0.8;
+        transform: rotate(-35deg);
+    }
+
+    /* Bottom helmet rim */
+    .helmet-bottom {
+        width: 85%;
+        height: 12%;
+        background: #94a3b8;
+        border: 0.5vmin solid #475569;
+        border-radius: 50%;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /* tail feathers */
+    .tail {
+        width: 10%;
+        height: 40%;
+        background: var(--orange1);
+        border-radius: 100% / 30% 30% 170% 170%;
+        transform-origin: 50% 100%;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .tail:nth-child(odd) {
+         background: var(--orange1);
+    }
+
+    .tail:nth-child(even) {
+         background: var(--orange2);
+    }
+
+    .tail:nth-child(1) {
+         transform: translate(-50%, 0) rotate(0);
+    }
+
+    .tail:nth-child(2) {
+         transform: translate(-50%, 0) rotate(17deg);
+    }
+
+    .tail:nth-child(3) {
+         transform: translate(-50%, 0) rotate(34deg);
+    }
+
+    .tail:nth-child(4) {
+         transform: translate(-50%, 0) rotate(51deg);
+    }
+
+    .tail:nth-child(5) {
+         transform: translate(-50%, 0) rotate(68deg);
+    }
+
+    .tail:nth-child(6) {
+         transform: translate(-50%, 0) rotate(85deg);
+    }
+
+    .tail:nth-child(7) {
+         transform: translate(-50%, 0) rotate(102deg);
+    }
+
+    .tail:nth-child(8) {
+         transform: translate(-50%, 0) rotate(-17deg);
+    }
+
+    .tail:nth-child(9) {
+         transform: translate(-50%, 0) rotate(-34deg);
+    }
+
+    .tail:nth-child(10) {
+         transform: translate(-50%, 0) rotate(-51deg);
+    }
+
+    .tail:nth-child(11) {
+         transform: translate(-50%, 0) rotate(-68deg);
+    }
+
+    .tail:nth-child(12) {
+         transform: translate(-50%, 0) rotate(-85deg);
+    }
+
+    .tail:nth-child(13) {
+         transform: translate(-50%, 0) rotate(-102deg);
+    }
